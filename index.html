@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Solar System by Ato_tm</title>
+</head>
+<body>
+    <div class="container">
+      <div class="sun">
+        <div class="planet-name" data-name="Sun">Sun</div>
+      </div>
+      <div class="earth">
+        <div class="planet-name" data-name="Earth">Earth</div>
+        <div class="moon">
+          <div class="planet-name" data-name="Moon">Moon</div>
+        </div>
+      </div>
+      <div class="mars">
+        <div class="planet-name" data-name="Mars">Mars</div>
+      </div>
+    </div>
+    <script>
+      function createStars() {
+        const container = document.querySelector('.container');
+        for (let i = 0; i < 1000; i++) { // короче кол-во зыезд епт
+          const star = document.createElement('div');
+          star.className = 'star';
+          star.style.width = '1px';
+          star.style.height = '1px';
+          star.style.top = Math.random() * 100 + '%';
+          star.style.left = Math.random() * 100 + '%';
+          container.appendChild(star);
+        }
+      }
+      createStars();
+    </script>
+  </body>
+  
+</html>
+
